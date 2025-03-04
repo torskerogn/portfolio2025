@@ -7,6 +7,24 @@ import Navigation from '../components/Navigation.astro'
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
+<script>
+  import gsap from 'gsap';
+</script>
+
 <Layout>
+  <div class="text-center m-8 grid grid-cols-5 w-full p-2 h-24">
+    <div class=" bg-primary inline-block rounded-2xl">primary</div>
+    <div class=" bg-secondary inline-block rounded-2xl">secondary</div>
+    <div class=" bg-third inline-block rounded-2xl">third</div>
+    <div class=" bg-black inline-block rounded-2xl">black</div>
+    <div class=" bg-white inline-block rounded-2xl">white</div>
+  </div>
+  <div class="text-center p-4 grid grid-cols-3 m-10">
+    <img src="/images/a.jpeg" alt="">
+    <img src="/images/b.jpeg" alt="">
+    <img src="/images/c.jpeg" alt="">
+  </div>
+
+
 </Layout>
 
