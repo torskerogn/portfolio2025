@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 import Header from '../components/Header.astro'
+import Test from "../pages/test.astro";
+import Blobs from "../components/Blobs.astro"
 ---
 
 <!doctype html>
@@ -14,6 +16,7 @@ import Header from '../components/Header.astro'
 	</head>
 	<body>
 		<Header></Header>
+		<Blobs></Blobs>
 		<slot />
 	</body>
 </html>
@@ -22,11 +25,17 @@ import Header from '../components/Header.astro'
 	html,
 	body {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		width: 100vw;
+		height: 100vh;
+	}
+	
+	body {
+		background-image: url("images/b_p.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 100%;
+		backdrop-filter: blur(100px);
 	}
 
-	body {
-		background-color: white;
-	}
+	
 </style>
