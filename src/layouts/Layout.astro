@@ -14,7 +14,7 @@ import Blobs from "../components/Blobs.astro"
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
+	<body class="grid h-full">
 		<Header></Header>
 		<Blobs></Blobs>
 		<slot />
@@ -37,5 +37,5 @@ import Blobs from "../components/Blobs.astro"
 		backdrop-filter: blur(100px);
 	}
 
-	
+
 </style>
