@@ -1,15 +1,26 @@
 ---
-
+const {next} = Astro.props
+const {previous} = Astro.props
+const {down} = Astro.props
+const {up} = Astro.props
 ---
 
-<div class="absolute bottom-10 left-8 text-center text-4xl font-bold">
-    <div class="rounded-xl content-center border-black bg-[#0D3B66] border-5 h-20 w-20 m-2 hover:w-92 transition-all not-hover:- hover:translate-x-2 hover:text-white not-hover:text-transparent duration-100 ">valdemar@verup.biz</div>
-    <div class="rounded-xl content-center border-black bg-[#F95738] border-5 h-20 w-20 m-2 hover:w-80 transition-all hover:translate-x-2 hover:text-white not-hover:text-transparent duration-100 ">+45 30 49 20 05</div>
-    <div class="rounded-xl content-center border-black bg-[#B66F93] border-5 h-20 w-20 m-2 hover:w-47 transition-all hover:translate-x-2 hover:text-white not-hover:text-transparent duration-100 " > <a href="https://www.instagram.com/valdefar_/" target="_blank" rel="noopener noreferrer">Valdefar_</a></div>
+<div class="absolute bottom-10 left-10 text-center text-4xl font-bold">
+    <div class="rounded-xl content-center border-black bg-[#0D3B66] border-5 h-20 w-20 mb-2 hover:w-92 transition-all not-hover:- hover:translate-x-2 hover:text-white not-hover:text-transparent duration-100 ">valdemar@verup.biz</div>
+    <div class="rounded-xl content-center border-black bg-[#F95738] border-5 h-20 w-20 mb-2 hover:w-80 transition-all hover:translate-x-2 hover:text-white not-hover:text-transparent duration-100 ">+45 30 49 20 05</div>
+    <div class="rounded-xl content-center border-black bg-[#B66F93] border-5 h-20 w-20 hover:w-47 transition-all hover:translate-x-2 hover:text-white not-hover:text-transparent duration-100 " ><a href="https://www.instagram.com/valdefar_/" target="_blank" rel="noopener noreferrer">Valdefar_</a></div>
 </div>
 
-<div class="absolute bottom-10 right-10 text-center text-4xl font-bold">
-    <div class="h-20 w-20 rounded-xl content-center border-black border-5 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]">&gt</div>
+<!-- <div class="absolute bottom-10 right-10 text-center text-4xl font-bold">
+    <a href={next} class="inline-block h-20 w-20 rounded-xl content-center border-black border-5 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]">&gt</a>
     <div class="h-20 w-20 mb-4"></div>
-    <div class="h-20 w-20 rounded-xl content-center border-black border-5 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]">&lt</div>
-</div>  
+    <a href={previous} class="inline-block h-20 w-20 rounded-xl content-center border-black border-5 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]">&lt</a>
+</div>   -->
+
+<div class="absolute bottom-10 right-10 text-center text-4xl font-bold">
+    <a href={previous} class="inline-block h-20 w-20 rounded-xl content-center border-black border-5 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]">&lt</a>
+    <a href={down} class="inline-block h-20 w-20 rounded-xl content-center border-black border-5 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]">v</a>
+    <a href={next} class="inline-block h-20 w-20 rounded-xl content-center border-black border-5 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]">&gt</a>
+
+</div>
+<a href={up} class="text-center text-4xl font-bold absolute bottom-32 right-32 inline-block h-20 w-20 rounded-xl content-center rotate-180 border-black border-5 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]">v</a>

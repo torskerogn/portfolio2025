@@ -17,11 +17,14 @@ import Velkommen from "../components/Velkommen.astro"
 </script>
 
 <Layout>
-  <Velkommen></Velkommen>
   <Frames></Frames>
   <CaseTitle>index</CaseTitle>
-  <style>
-    body {
+  <Footer next="/work" previous="/" up="/" down="/work"></Footer>
+  <Velkommen></Velkommen>
+</Layout>
+
+<style>
+  body {
 background-image: url("/images/indexx_b.jpg");
 background-repeat: no-repeat;
 background-size: cover;
@@ -29,6 +32,4 @@ background-position: 100%;
 backdrop-filter: blur(100px);
 }
 </style>
-  <Footer></Footer>
-</Layout>
 

@@ -5,20 +5,22 @@ import Blobs from "../components/Blobs.astro"
 import Footer from "../components/Footer.astro"
 import CaseTitle from "../components/CaseTitle.astro"
 import Frames from "../components/Frames.astro"
+import BlobFrame from "../components/BlobFrame.astro"
 ---
 
 <Layout>
     <style>
         body {
-    background-image: url("/images/b_b.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100%;
-    backdrop-filter: blur(100px);
-}
-</style>
+            background-image: url("/images/blender_b.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 100%;
+            backdrop-filter: blur(100px);
+        }
+        </style>
     <CaseTitle>work</CaseTitle>
+    <BlobFrame></BlobFrame>
     <Blobs></Blobs>
-    <Footer></Footer>
+    <Footer next="/blender" previous="/" up="/" down="/about"></Footer>
     <Frames></Frames>
 </Layout>
