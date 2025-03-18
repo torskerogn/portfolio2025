@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 566.93 566.93">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .1em;
+      }
+
+      .cls-2 {
+        letter-spacing: .06em;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+        font-family: Monoton-Regular, Monoton;
+        font-size: 588.29px;
+      }
+    </style>
+  </defs>
+  <text class="cls-3" transform="translate(27.76 515.82) scale(.45 1)"><tspan class="cls-2" x="0" y="0">V</tspan><tspan class="cls-1" x="589.66" y="0">V</tspan></text>
+</svg>
