@@ -6,9 +6,9 @@ const {up} = Astro.props
 ---
 
 <div class="absolute bottom-10 left-10 text-center text-4xl font-bold">
-    <div class="rounded-xl content-center border-black bg-[#0D3B66] border-5 h-20 w-20 mb-2 hover:w-92 transition-all not-hover:- hover:translate-x-2 hover:text-white hover:border-[#FAF0CA] not-hover:text-transparent duration-100 font-secondary">valdemar@verup.biz</div>
-    <div class="rounded-xl content-center border-black bg-[#F95738] border-5 h-20 w-20 mb-2 hover:w-80 transition-all hover:translate-x-2 hover:text-white hover:border-[#FAF0CA] not-hover:text-transparent duration-100 font-secondary">+45 30 49 20 05</div>
-    <div class="rounded-xl content-center border-black bg-[#B66F93] border-5 h-20 w-20 hover:w-47 transition-all hover:translate-x-2 hover:text-white hover:border-[#FAF0CA] not-hover:text-transparent duration-100 font-secondary" ><a href="https://www.instagram.com/valdefar_/" target="_blank" rel="noopener noreferrer">Valdefar_</a></div>
+    <div class="rounded-xl content-center border-black bg-[#0D3B66] border-3 h-20 w-20 mb-2 hover:w-92 transition-all not-hover:- hover:translate-x-2 hover:text-white not-hover:text-transparent duration-100 font-secondary">valdemar@verup.biz</div>
+    <div class="rounded-xl content-center border-black bg-[#F95738] border-3 h-20 w-20 mb-2 hover:w-80 transition-all hover:translate-x-2 hover:text-white not-hover:text-transparent duration-100 font-secondary">+45 30 49 20 05</div>
+    <div class="rounded-xl content-center border-black bg-[#B66F93] border-3 h-20 w-20 hover:w-47 transition-all hover:translate-x-2 hover:text-white not-hover:text-transparent duration-100 font-secondary" ><a href="https://www.instagram.com/valdefar_/" target="_blank" rel="noopener noreferrer">Valdefar_</a></div>
 </div>
 
 <!-- <div class="absolute bottom-10 right-10 text-center text-4xl font-bold">
@@ -18,9 +18,48 @@ const {up} = Astro.props
 </div>   -->
 
 <div class="absolute bottom-10 right-10 text-center text-4xl font-bold">
-    <a href={previous} class="inline-block h-20 w-20 rounded-xl content-center border-black border-5 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]">&lt</a>
-    <a href={down} class="inline-block h-20 w-20 rounded-xl content-center border-black border-5 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]">v</a>
-    <a href={next} class="inline-block h-20 w-20 rounded-xl content-center border-black border-5 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]">&gt</a>
+    <a href={previous} class="inline-block h-20 w-20 rounded-xl content-center border-black border-3 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]" data-key="left">&lt</a>
+    <a href={down} class="inline-block h-20 w-20 rounded-xl content-center border-black border-3 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]" data-key="down">v</a>
+    <a href={next} class="inline-block h-20 w-20 rounded-xl content-center border-black border-3 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]"data-key="right">&gt</a>
 
 </div>
-<a href={up} class="text-center text-4xl font-bold absolute bottom-32 right-32 inline-block h-20 w-20 rounded-xl content-center rotate-180 border-black border-5 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]">v</a>
+<a href={up} class="text-center text-4xl font-bold absolute bottom-32 right-32 inline-block h-20 w-20 rounded-xl content-center rotate-180 border-black border-3 transition-all hover:text-[#FAF0CA] hover:border-[#FAF0CA]" data-key="up">v</a>
+
+<script>
+console.log('blabla')
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    
+    
+    e = e || window.event;
+
+    if (e.keyCode == 38) {
+        const a = document.querySelector('[data-key="up"]')
+        if(a.href) {
+            window.location = a.href
+        }
+    }
+    else if (e.keyCode == 40) {
+        const a = document.querySelector('[data-key="down"]')
+        if(a.href) {
+            window.location = a.href
+        }
+    }
+    else if (e.keyCode == 37) {
+        const a = document.querySelector('[data-key="left"]')
+        if(a.href) {
+            window.location = a.href
+        }
+    }
+    else if (e.keyCode == 39) {
+       const a = document.querySelector('[data-key="right"]')
+        if(a.href) {
+            window.location = a.href
+        }
+    }
+
+}
+
+</script>
